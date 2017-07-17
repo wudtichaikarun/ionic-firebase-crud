@@ -5,14 +5,16 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 // Import angularfire2
 import { AngularFireModule } from 'angularfire2'
+import { AngularFireDatabaseModule } from 'angularfire2/database'
+import { FIREBASE_CREDENTAILS } from './firebase.credentails'
 
 import { MyApp } from './app.component';
 // New component
 import { ShoppingListPage } from '../pages/shopping-list/shopping-list'
 import { AddShoppingPage } from '../pages/add-shopping/add-shopping'
 
-// Import firebase credentails
-import { FIREBASE_CREDENTAILS } from './firebase.credentails'
+
+
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { FIREBASE_CREDENTAILS } from './firebase.credentails'
     BrowserModule,
     IonicModule.forRoot(MyApp),
     // Initialise angularfire with credentails from the dashboard
-    AngularFireModule.initializeApp(FIREBASE_CREDENTAILS)
+    AngularFireModule.initializeApp(FIREBASE_CREDENTAILS),
+    // Import the AngularFireDatabaseModule to use database interaction
+    AngularFireDatabaseModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
