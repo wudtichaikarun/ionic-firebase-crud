@@ -10,8 +10,9 @@ import { FIREBASE_CREDENTAILS } from './firebase.credentails'
 
 import { MyApp } from './app.component';
 // New component
-import { ShoppingListPage } from '../pages/shopping-list/shopping-list'
-import { AddShoppingPage } from '../pages/add-shopping/add-shopping'
+import { ShoppingListPage } from '../pages/shopping-list/shopping-list';
+import { AddShoppingPage } from '../pages/add-shopping/add-shopping';
+import { EditShoppingItemPage } from '../pages/edit-shopping-item/edit-shopping-item'
 
 
 
@@ -20,7 +21,8 @@ import { AddShoppingPage } from '../pages/add-shopping/add-shopping'
   declarations: [
     MyApp,
     ShoppingListPage,
-    AddShoppingPage
+    AddShoppingPage,
+    EditShoppingItemPage
   ],
   imports: [
     BrowserModule,
@@ -34,7 +36,8 @@ import { AddShoppingPage } from '../pages/add-shopping/add-shopping'
   entryComponents: [
     MyApp,
     ShoppingListPage,
-    AddShoppingPage
+    AddShoppingPage,
+    EditShoppingItemPage
   ],
   providers: [
     StatusBar,
